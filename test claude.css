@@ -1,0 +1,1644 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* Fond noir comme dans l'image */
+    color: white;
+}
+/* Style de la bannière avec image de fond */
+.banner {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/placeholder/400/320');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px; /* Hauteur réduite de la bannière */
+    position: relative;
+    color: white; /* Couleur du texte dans la bannière */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la lisibilité */
+}
+.banner-content {
+    font-family: Vollkorn ;
+}
+/* Style de la barre de navigation */
+.navbar {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espace entre les éléments (logo, liens, bouton) */
+    align-items: center; /* Centrage vertical */
+    padding: 20px 50px; /* Espacement interne (haut/bas et gauche/droite) */
+    background-color: #000; /* Fond noir comme dans l'image */
+}
+/* Style du logo */
+.logo h1 {
+    font-size: 18px;
+    color: #D40000; /* Couleur orange comme dans l'image */
+}
+/* Style de la partie droite de la navbar */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* Style du bouton à droite */
+.button {
+    color: #D40000; /* Texte orange */
+    padding: 10px 20px; /* Espacement interne */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold;
+    border: none;
+    margin-right: 60px;
+}
+.button:hover {
+    color: white; /* Blanc au survol */
+}
+/* Style des icônes sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #D40000; /* Orange au survol */
+}
+/* Section héro avec slogan et images */
+.hero-section {
+    padding: 0 20px;
+    background-color: #000; /* Fond noir */
+    position: relative;
+}
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 100%;
+    height: 80vh; /* Hauteur en pourcentage de la vue */
+    overflow: hidden;
+}
+/* Style des images latérales */
+.hero-image {
+    width: 30%; /* Chaque image prend la moitié de la largeur */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;  
+}
+.left-image {
+    background-image: url(images/image\ gauche.jpeg);
+}
+.right-image {
+    background-image: url(images/image\ droite.jpeg);
+}
+/* Style du conteneur de texte superposé */
+.hero-text-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+    text-align: center;
+    padding: 0 20px;
+}
+/* Style des lignes de texte individuelles */
+.hero-text-line {
+    font-size: 80px; /* Taille plus grande pour le texte superposé */
+    line-height: 1.1;
+    font-weight: bold;
+    color: #D40000; /* Couleur orange comme dans l'image */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
+}
+/* Ajustements spécifiques pour chaque ligne */
+.line1 {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+.line2 {
+    margin-bottom: 10px;
+}
+.line3 {
+    margin-bottom: 30px;
+    font-style: italic;
+}
+/* Style du bouton d'appel à l'action */
+.cta-button-container {
+    margin-top: 40px;
+    text-align: center;
+}
+.cta-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #D40000; /* Couleur orange */
+    border: 2px solid #D40000;
+    border-radius: 50px;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #D40000;
+    color: white;
+}
+/* Style du bandeau défilant */
+.scrolling-banner {
+    background-color: #000; /* Fond noir */
+    border-top: 1px solid #D40000;
+    border-bottom: 1px solid #D40000;
+    overflow: hidden;
+    padding: 15px 0;
+}
+.scrolling-banner .banner-content {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    color: #D40000; /* Couleur orange */
+    font-weight: bold;
+    animation: scroll-left 30s linear infinite;
+}
+.diamond {
+    color: #D40000;
+    display: inline-block;
+}
+
+/*Responsive*/
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+/* Media queries pour la responsivité */
+@media (max-width: 1024px) {
+    .hero-text-line {
+        font-size: 60px;
+    }
+}
+@media (max-width: 768px) {
+    .hero-text-line {
+        font-size: 40px;
+    }
+    .hero-container {
+        flex-direction: column;
+        height: auto;
+    }   
+    .hero-image {
+        width: 50%;
+        height: 300px;
+    }   
+    .hero-text-container {
+        position: relative;
+        top: 0;
+        transform: none;
+        padding: 40px 20px;
+        background-color: #1a1a1a;
+    }
+}
+
+/* SECTION DU TITRE - avec préfixes pour éviter conflits */
+.creation-hero-section {
+    text-align: center; /* Centre le titre */
+    margin: 60px 0; /* Espace au-dessus et en dessous du titre */
+    padding: 0 20px; /* Espacement sur les côtés */
+}
+.creation-main-title {
+    font-size: 3.5rem; /* Taille du titre principal */
+    font-weight: bold;
+    color: #D40000; /* Même couleur orange que votre site existant */
+    text-transform: uppercase; /* Met tout en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif; /* Même police que votre site */
+}
+/* Style pour le mot en italique dans le titre */
+.creation-italic {
+    font-style: italic;
+    color: #D40000;
+}
+/* SECTION DU CONTENU - avec préfixes pour éviter conflits */
+.creation-content-section {
+    display: flex; /* Utilise flexbox pour la mise en page */
+    justify-content: flex-end; /* Aligne le contenu à droite */
+    margin: 60px 0; /* Espace au-dessus et en dessous du contenu */
+    max-width: 1200px; /* Largeur maximale */
+    margin-left: auto; /* Centre le contenu */
+    margin-right: auto; /* Centre le contenu */
+    padding: 0 20px; /* Espacement sur les côtés */
+}
+
+/* ZONE DE TEXTE - avec préfixes pour éviter conflits */
+.creation-text-content {
+    width: 50%; /* Prend la moitié droite de l'écran */
+    padding-left: 40px; /* Espace à gauche du texte */
+}
+.creation-intro-text {
+    font-size: 1.1rem; /* Légèrement plus grand que le texte normal */
+    color: #D40000; /* Même couleur orange que votre site */
+    margin-bottom: 30px; /* Espace entre les paragraphes */
+    font-weight: 500; /* Un peu plus gras */
+    line-height: 1.7; /* Espacement généreux entre les lignes */
+    font-family: 'Roboto', sans-serif; /* Même police que votre site */
+}
+.creation-secondary-text {
+    font-size: 1.1rem;
+    color: #D40000; /* Même couleur pour la cohérence */
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif; /* Même police que votre site */
+}
+/* SECTION IMAGE - avec préfixes pour éviter conflits */
+.creation-image-section {
+    flex: 0; /* Prend l'espace restant */
+    color: #000; /* Couleur sombre pour contraster avec le fond orange */
+    text-align: center; /* Centre l'image */
+    margin: 60px 0; /* Espace au-dessus et en dessous */
+    margin-left: 100px ;
+    margin-right: 100px;
+    height: 600px;
+    background-image: url(images/image_page.jpg);    
+}
+.creation-hero-image {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto; /* Garde les proportions de l'image */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Ombre portée */
+}
+
+/* STYLES RESPONSIFS POUR LES NOUVELLES SECTIONS */
+/* Pour les tablettes (écrans moyens) */
+@media (max-width: 768px) {
+    .creation-main-title {
+        font-size: 2.5rem; /* Titre plus petit sur tablette */
+    }  
+    .creation-content-section {
+        flex-direction: column; /* Stack les éléments verticalement */
+    }   
+    .creation-text-content {
+        width: 100%; /* Le texte prend toute la largeur */
+        padding-left: 0; /* Supprime le padding gauche */
+        margin-bottom: 40px; /* Ajoute un espace en dessous */
+    }
+}
+/* Pour les téléphones (petits écrans) */
+@media (max-width: 480px) {
+    .creation-hero-section,
+    .creation-content-section,
+    .creation-image-section {
+        padding: 0 15px; /* Moins de padding sur mobile */
+    }   
+    .creation-main-title {
+        font-size: 2rem; /* Titre encore plus petit */
+        letter-spacing: 1px; /* Moins d'espacement entre lettres */
+    }   
+    .creation-intro-text,
+    .creation-secondary-text {
+        font-size: 1rem; /* Texte plus petit sur mobile */
+    }
+}
+
+/* ========================================== */
+/* SECTION DÉCOUVREZ VOS FORMATEURS           */
+/* ========================================== */
+.formateurs-section {
+    background-color: #D40000;
+    padding: 80px 20px; /* Espacement généreux */
+    text-align: center; /* Centre tout le contenu */
+    position: relative;
+}
+.formateurs-container {
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centre le conteneur */
+    position: relative;
+}
+.formateurs-title {
+    font-size: 4rem; /* Titre très grand */
+    font-weight: 900; /* Très gras */
+    color: #2a2a2a; /* Couleur sombre pour contraster avec le fond orange */
+    text-transform: uppercase; /* Tout en majuscules */
+    letter-spacing: 3px; /* Espacement entre lettres */
+    margin-bottom: 60px; /* Espace en dessous du titre */
+    font-family: 'Roboto', sans-serif; /* Même police que votre site */
+    line-height: 0.9; /* Lignes serrées pour un effet impactant */
+}
+.formateurs-italic {
+    font-style: italic; /* Mot en italique */
+    color: #2a2a2a; /* Même couleur sombre */
+}
+.formateurs-image-container {
+    background-image: url(images/enzoferrari.jpeg);
+    display: flex;
+    justify-content: center; /* Centre l'image */
+    align-items: center;
+}
+.formateurs-portrait {
+    width: 400px; /* Largeur fixe pour le portrait */
+    height: 600px; /* Hauteur fixe pour créer un rectangle */
+    object-fit: cover; /* Garde les proportions et remplit le cadre */
+    border-radius: 0; /* Pas d'arrondi pour garder l'effet rectangulaire */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Ombre portée pour donner de la profondeur */
+}
+
+/* STYLES RESPONSIFS POUR LA SECTION FORMATEURS */
+@media (max-width: 1024px) {
+    .formateurs-title {
+        font-size: 3rem; /* Titre plus petit sur tablette */
+    }   
+    .formateurs-portrait {
+        width: 350px; /* Image plus petite sur tablette */
+        height: 450px;
+    }
+}
+@media (max-width: 768px) {
+    .formateurs-section {
+        padding: 60px 20px; /* Moins de padding sur mobile */
+    }  
+    .formateurs-title {
+        font-size: 2.5rem; /* Titre encore plus petit sur mobile */
+        letter-spacing: 2px; /* Moins d'espacement */
+        margin-bottom: 40px; /* Moins d'espace en dessous */
+    }    
+    .formateurs-portrait {
+        width: 280px; /* Image adaptée au mobile */
+        height: 350px;
+    }
+}
+@media (max-width: 480px) {
+    .formateurs-title {
+        font-size: 2rem; /* Titre très petit sur petit mobile */
+        letter-spacing: 1px;
+    }  
+    .formateurs-portrait {
+        width: 250px; /* Image encore plus petite */
+        height: 320px;
+    }
+}
+
+/* ============================================ */
+/* NOUVELLE SECTION DREW                        */
+/* ============================================ */
+/* Style du contenu texte */
+.drew-content {
+    flex: 1; /* Prend l'espace restant */
+    color: #000; /* Couleur sombre pour contraster avec le fond orange */
+}
+.drew-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #2a2a2a; /* Texte sombre sur fond orange */
+}
+/* Style du bouton Drew */
+.drew-button-container {
+    text-align: left;
+}
+.drew-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #000000; /* Couleur sombre */
+    border: 3px solid #000; /* Bordure sombre */
+    border-radius: 50px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+.drew-button:hover {
+    background-color: #000;
+    color: #D40000; /* Texte orange au survol */
+}
+
+/* ============================================ */
+/* SECTION FORMATEURS                           */
+/* ============================================ */
+.formateurs-section {
+    background-color: #D40000;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+.formateurs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.formateurs-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 0.9;
+}
+.formateurs-italic {
+    font-style: italic;
+    color: #000;
+}
+.formateurs-image-container {
+    background-image: url(images/image\ gagnant.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================ */
+/* STYLES RESPONSIFS                            */
+/* ============================================ */
+/* Pour les tablettes */
+@media (max-width: 1024px) {
+    .hero-text-line {
+        font-size: 60px;
+    }   
+    .drew-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+      .drew-image {
+        width: 250px;
+        height: 350px;
+        margin: 0 auto;
+    }   
+    .formateurs-title {
+        font-size: 3rem;
+    }   
+    .formateurs-image-container {
+        width: 350px;
+        height: 450px;
+    }
+}
+/* Pour les mobiles */
+@media (max-width: 768px) {
+    .hero-text-line {
+        font-size: 40px;
+    }  
+    .hero-container {
+        flex-direction: column;
+        height: auto;
+    }   
+    .hero-image {
+        width: 50%;
+        height: 300px;
+    }    
+    .hero-text-container {
+        position: relative;
+        top: 0;
+        transform: none;
+        padding: 40px 20px;
+        background-color: #1a1a1a;
+    }    
+    .creation-content-section {
+        flex-direction: column;
+    }   
+    .creation-text-content {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 40px;
+    }    
+    .drew-section {
+        padding: 60px 20px;
+    }    
+    .drew-image {
+        width: 200px;
+        height: 280px;
+    }   
+    .drew-text {
+        font-size: 1rem;
+    }   
+    .formateurs-section {
+        padding: 60px 20px;
+    }   
+    .formateurs-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }    
+    .formateurs-image-container {
+        width: 280px;
+        height: 350px;
+    }
+}
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .creation-main-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }   
+    .creation-intro-text,
+    .creation-secondary-text {
+        font-size: 1rem;
+    }   
+    .drew-text {
+        font-size: 0.9rem;
+    }  
+    .formateurs-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }  
+    .formateurs-image-container {
+        width: 250px;
+        height: 320px;
+    }
+}
+
+/* ============================================ */
+/* NOUVELLE SECTION EXPERT                      */
+/* ============================================ */
+.expert-section {
+    background-color: #000; /* Fond gris foncé comme dans l'image */
+    padding: 80px 20px;
+    text-align: left;
+}
+.expert-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.expert-main-title {
+    font-size: 5rem; /* Très grand titre */
+    font-weight: 900; /* Très gras */
+    color: #D40000; /* Couleur orange */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 0.9; /* Lignes serrées */
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+.expert-italic {
+    font-style: italic;
+    color: #D40000;
+}
+.expert-formation-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+.expert-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #D40000;
+    font-family: 'Roboto', sans-serif;
+}
+.expert-description {
+    flex: 1;
+}
+.expert-formation-title {
+    font-size: 1.2rem;
+    color: #D40000;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.expert-formation-subtitle {
+    font-size: 1.2rem;
+    color: #D40000;
+    font-weight: 700;
+}
+
+/* ============================================ */
+/* NOUVELLE SECTION PROJET                      */
+/* ============================================ */
+.projet-section {
+    background-color: #000; 
+    padding: 80px 20px;
+}
+.projet-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.projet-image {
+    flex: 1;
+    background-image: url(images/lewishamilton.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    border-radius: 15px;
+    position: relative;
+}
+.projet-content {
+    flex: 1;
+    color: #D40000;
+    position: relative;
+}
+.projet-badge {
+    background-color: #D40000;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.projet-info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.projet-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #D40000;
+}
+.projet-cours {
+    font-size: 1.1rem;
+    color: #D40000;
+}
+.projet-description {
+    font-size: 1.1rem;
+    color: #D40000;
+    font-weight: 500;
+}
+.projet-text {
+    font-size: 1rem;
+    color: #D40000;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+/* ============================================ */
+/* SECTION FORMATEURS                           */
+/* ============================================ */
+.formateurs-section {
+    background-color: #D40000;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+.formateurs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.formateurs-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 0.9;
+}
+.formateurs-italic {
+    font-style: italic;
+    color: #000;
+}
+.formateurs-image-container {
+    background-image: url(images/enzoferrari.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================ */
+/* SECTION DREW                                 */
+/* ============================================ */
+.drew-section {
+    background-color: #D40000;
+    padding: 80px 20px;
+}
+.drew-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.drew-content {
+    color: #000;
+}
+.drew-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #000;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.drew-button-container {
+    text-align: center;
+}
+.drew-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #000;
+    border: 3px solid #000;
+    border-radius: 50px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+.drew-button:hover {
+    background-color: #000;
+    color: #D40000;
+}
+
+/* ============================================ */
+/* STYLES RESPONSIFS                            */
+/* ============================================ */
+/* Pour les tablettes (écrans moyens) */
+@media (max-width: 1024px) {
+    .hero-text-line {
+        font-size: 60px;
+    }   
+    .expert-main-title {
+        font-size: 4rem;
+    }   
+    .projet-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }   
+    .projet-image {
+        height: 400px;
+        max-width: 500px;
+        margin: 0 auto;
+    }   
+    .formateurs-title {
+        font-size: 3rem;
+    }   
+    .formateurs-image-container {
+        width: 350px;
+        height: 450px;
+    }
+}
+/* Pour les téléphones (petits écrans) */
+@media (max-width: 768px) {
+    .hero-text-line {
+        font-size: 40px;
+    }   
+    .hero-container {
+        flex-direction: column;
+        height: auto;
+    }   
+    .hero-image {
+        width: 50%;
+        height: 300px;
+    }   
+    .hero-text-container {
+        position: relative;
+        top: 0;
+        transform: none;
+        padding: 40px 20px;
+        background-color: #000;
+    }  
+    .creation-content-section {
+        flex-direction: column;
+    }  
+    .creation-text-content {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 40px;
+    }   
+    .expert-section {
+        padding: 60px 20px;
+    }   
+    .expert-main-title {
+        font-size: 2.5rem;
+    }   
+    .expert-formation-info {
+        flex-direction: column;
+        gap: 20px;
+    }   
+    .projet-section {
+        padding: 60px 20px;
+    }   
+    .projet-image {
+        height: 300px;
+    }   
+    .projet-text {
+        font-size: 0.9rem;
+    }   
+    .formateurs-section {
+        padding: 60px 20px;
+    }   
+    .formateurs-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }  
+    .formateurs-image-container {
+        width: 280px;
+        height: 350px;
+    }    
+    .drew-section {
+        padding: 60px 20px;
+    }  
+    .drew-text {
+        font-size: 1rem;
+    }
+}
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .creation-main-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    } 
+    .creation-intro-text,
+    .creation-secondary-text {
+        font-size: 1rem;
+    }   
+    .expert-main-title {
+        font-size: 2rem;
+    }   
+    .expert-number {
+        font-size: 2rem;
+    }   
+    .expert-formation-title,
+    .expert-formation-subtitle {
+        font-size: 1rem;
+    }   
+    .projet-title {
+        font-size: 1.1rem;
+    }  
+    .projet-cours,
+    .projet-description {
+        font-size: 1rem;
+    }  
+    .drew-text {
+        font-size: 0.9rem;
+    }   
+    .formateurs-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }   
+    .formateurs-image-container {
+        width: 250px;
+        height: 320px;
+    }
+}
+
+/* ============================================ */
+/* NOUVELLE SECTION FIDÉLISATION                */
+/* ============================================ */
+.fidelisation-section {
+    background-color: #000; /* Fond gris foncé comme dans l'image */
+    padding: 80px 20px;
+}
+.fidelisation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.fidelisation-header {
+    margin-bottom: 50px;
+}
+.fidelisation-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #D40000; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.fidelisation-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+.fidelisation-image {
+    flex: 0 0 400px; 
+    height: 500px;
+    background-image: url(images/charlesleclerc.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.fidelisation-text-content {
+    flex: 1; /* Prend l'espace restant */
+    color: #D40000;
+    padding-left: 20px;
+}
+.fidelisation-project {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #D40000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.fidelisation-cours {
+    font-size: 1.2rem;
+    color: #D40000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.fidelisation-description {
+    font-size: 1.1rem;
+    color: #D40000;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+.fidelisation-text {
+    font-size: 1rem;
+    color: #D40000;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.fidelisation-button-container {
+    text-align: left;
+}
+.fidelisation-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #D40000;
+    border: 3px solid #D40000;
+    border-radius: 50px;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.fidelisation-button:hover {
+    background-color: #D40000;
+    color: #000;
+}
+
+/* ============================================ */
+/* NOUVELLE SECTION TÉMOIGNAGE CLIENT          */
+/* ============================================ */
+.testimonial-section {
+    background-color: #D40000;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden; /* Pour éviter les débordements */
+}
+.testimonial-container {
+    max-width: 1400px; /* Largeur maximale pour grands écrans */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    min-height: 70vh; /* Hauteur minimale pour occuper l'écran */
+}
+.testimonial-content {
+    flex: 2; /* Prend plus d'espace que l'image */
+    color: #000; 
+}
+.testimonial-main-text {
+    font-size: 4rem; 
+    font-weight: 900; 
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1; 
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+.testimonial-signature {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.testimonial-image-container {
+    flex: 1; /* Prend moins d'espace que le texte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial-image {
+    width: 350px; /* Largeur fixe pour le portrait */
+    height: 450px; /* Hauteur fixe pour créer un rectangle */
+    background-image: url(images/scuderia.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    position: relative;
+}
+/* Effet de superposition pour l'image */
+.testimonial-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(42, 42, 42, 0.1); /* Légère superposition sombre */
+    border-radius: 0;
+}
+
+/* ============================================ */
+/* STYLES RESPONSIFS POUR LA SECTION TÉMOIGNAGE */
+/* ============================================ */
+/* Pour les tablettes (écrans moyens) */
+@media (max-width: 1024px) {
+    .testimonial-main-text {
+        font-size: 3rem; /* Titre plus petit sur tablette */
+    }  
+    .testimonial-container {
+        gap: 40px;
+    }   
+    .testimonial-image {
+        width: 300px;
+        height: 380px;
+    }
+}
+/* Pour les téléphones (petits écrans) */
+@media (max-width: 768px) {
+    .testimonial-section {
+        padding: 60px 20px;
+    }   
+    .testimonial-container {
+        flex-direction: column; /* Stack les éléments verticalement */
+        text-align: center;
+        gap: 40px;
+        min-height: auto;
+    }  
+    .testimonial-content {
+        flex: none; /* Supprime le flex pour mobile */
+    }   
+    .testimonial-main-text {
+        font-size: 2.2rem; /* Titre adapté au mobile */
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }   
+    .testimonial-image-container {
+        flex: none;
+    }   
+    .testimonial-image {
+        width: 280px;
+        height: 350px;
+    }
+}
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .testimonial-main-text {
+        font-size: 1.8rem; /* Titre encore plus petit */
+        letter-spacing: 0.5px;
+    }   
+    .testimonial-signature {
+        font-size: 1rem;
+    }   
+    .testimonial-image {
+        width: 250px;
+        height: 320px;
+    }
+}
+
+/* ============================================ */
+/* NOUVELLE SECTION CHOISIR UNE PHOTO         */
+/* ============================================ */
+.forfait-section {
+    background-color: #000; 
+    padding: 100px 20px; /* Espacement généreux en haut et en bas */
+    text-align: center; 
+}
+.forfait-container {
+    max-width: 1400px; /* Largeur maximale pour contenir les 3 cartes */
+    margin: 0 auto; /* Centre le conteneur */
+}
+.forfait-main-title {
+    font-size: 4.5rem; 
+    font-weight: 900; /* Très gras */
+    color: #D40000; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; /* Espacement entre lettres */
+    line-height: 0.9; /* Lignes serrées pour plus d'impact */
+    margin-bottom: 80px; /* Espace en dessous du titre */
+    font-family: 'Roboto', sans-serif; 
+}
+.forfait-italic {
+    font-style: italic;
+    color: #D40000;
+}
+.forfait-cards-container {
+    display: flex; /* Affiche les cartes côte à côte */
+    gap: 30px; /* Espace between les cartes */
+    justify-content: center; /* Centre les cartes */
+    align-items: stretch; /* Étire les cartes à la même hauteur */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur mobile */
+}
+/* Style des cartes individuelles */
+.forfait-card {
+    background-color: #000;
+    border: 2px solid #000; 
+    border-radius: 15px; 
+    padding: 40px 30px; 
+    width: 350px;
+    position: relative; /* Pour positionner le badge */
+    transition: all 0.3s ease; /* Animation douce au survol */
+    color: #D40000; 
+}
+/* Effet au survol des cartes */
+.forfait-card:hover {
+    transform: translateY(-10px); /* Élève la carte au survol */
+    box-shadow: 0 20px 40px rgba(232, 98, 65, 0.2); /* Ombre orange */
+    border-color: #D40000; 
+}
+/* Carte mise en avant (PRO) */
+.forfait-card-featured {
+    border-color: #D40000; 
+    background-color: #000; 
+    transform: scale(1.05); /* Légèrement plus grande */
+    box-shadow: 0 15px 35px rgba(232, 98, 65, 0.3); 
+}
+/* Badge "RECOMMANDÉ" */
+.forfait-badge {
+    position: absolute; /* Position absolue pour le placer en haut */
+    top: -15px; /* Décale vers le haut */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Centre parfaitement */
+    background-color: #D40000; 
+    color: #000; 
+    padding: 8px 20px; 
+    border-radius: 20px; 
+    font-size: 0.8rem; /* Taille petite */
+    font-weight: bold; /* Texte gras */
+    text-transform: uppercase; /* Majuscules */
+    letter-spacing: 1px; 
+}
+/* En-tête des cartes */
+.forfait-card-header {
+    margin-bottom: 30px; 
+    padding-bottom: 20px; 
+    border-bottom: 1px solid #000; 
+}
+/* Titre de chaque carte */
+.forfait-card-title {
+    font-size: 1.8rem; /* Taille moyenne */
+    font-weight: bold; /* Gras */
+    color: #D40000; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; /* Majuscules */
+    letter-spacing: 2px; /* Espacement lettres */
+}
+/* Conteneur du prix */
+.forfait-price {
+    display: flex; /* Affichage flexible */
+    align-items: baseline; /* Aligne sur la ligne de base */
+    justify-content: center; /* Centre le prix */
+    gap: 5px; /* Espace entre les éléments */
+}
+/* Symbole de la devise */
+.forfait-currency {
+    font-size: 1.5rem; /* Taille moyenne */
+    color: #D40000;
+    font-weight: bold; /* Gras */
+}
+/* Montant du prix */
+.forfait-amount {
+    font-size: 3rem; /* Très grand */
+    color: #D40000; 
+    font-weight: 900; /* Très gras */
+    line-height: 1; /* Ligne serrée */
+}
+/* Période du prix */
+.forfait-period {
+    font-size: 1rem; /* Taille normale */
+    color: #999; /* Gris clair */
+    font-weight: 500; /* Moyennement gras */
+}
+/* Contenu des cartes */
+.forfait-card-content {
+    text-align: left; 
+}
+/* Liste des fonctionnalités */
+.forfait-features {
+    list-style: none; /* Supprime les puces */
+    padding: 0; 
+    margin: 0 0 40px 0; 
+}
+/* Chaque fonctionnalité */
+.forfait-features li {
+    padding: 12px 0; 
+    color: #D40000; 
+    font-size: 1rem; /* Taille normale */
+    line-height: 1.5; /* Hauteur de ligne */
+    position: relative; /* Pour ajouter l'icône */
+    padding-left: 25px; 
+}
+/* Icône de coche pour chaque fonctionnalité */
+.forfait-features li::before {
+    content: "✓"; /* Caractère de coche */
+    position: absolute; /* Position absolue */
+    left: 0; 
+    color: #D40000; 
+    font-weight: bold; /* Gras */
+    font-size: 1.1rem; /* Légèrement plus grand */
+}
+/* Conteneur des boutons */
+.forfait-button-container {
+    text-align: center; 
+}
+/* Style des boutons */
+.forfait-button {
+    display: inline-block; /* Affichage en bloc inline */
+    padding: 15px 30px; 
+    border-radius: 50px;
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 1rem; /* Taille normale */
+    font-weight: bold; /* Gras */
+    text-transform: uppercase; /* Majuscules */
+    letter-spacing: 1px; /* Espacement lettres */
+    transition: all 0.3s ease; /* Animation douce */
+    width: 100%; /* Largeur complète */
+    text-align: center; 
+}    
+/* Bouton principal (pour la carte PRO) */
+.forfait-button-primary {
+    background-color: #D40000; 
+    color: #000; 
+    border: 2px solid #D40000; 
+}
+.forfait-button-primary:hover {
+    background-color: transparent; /* Fond transparent au survol */
+    color: #D40000; 
+    border-color: #D40000;
+}
+/* Bouton secondaire (pour les autres cartes) */
+.forfait-button-secondary {
+    background-color: transparent; /* Fond transparent */
+    color: #D40000;
+    border: 2px solid #D40000; 
+}
+.forfait-button-secondary:hover {
+    background-color: #D40000; 
+    color: #000; 
+}
+.my_class_0055 {
+        background-color: #000;
+        margin: 60px 0; 
+        margin-left: 400px ;
+        margin-right: 400px;
+        height: 400px;
+        background-image: url(images/forfaitimage.jpg);         
+}
+.photo-forfait {
+    background-image: url(images/imagepleinepage.jpg);
+}
+
+/* ============================================ */
+/* STYLES RESPONSIFS POUR LA SECTION FORFAIT   */
+/* ============================================ */
+/* Pour les tablettes (écrans moyens) */
+@media (max-width: 1024px) {
+    .forfait-main-title {
+        font-size: 3.5rem; /* Titre plus petit */
+        margin-bottom: 60px; /* Moins d'espace */
+    }   
+    .forfait-cards-container {
+        gap: 20px; /* Moins d'espace entre les cartes */
+    }    
+    .forfait-card {
+        width: 300px; /* Cartes plus petites */
+    }    
+    .forfait-card-featured {
+        transform: scale(1.02); /* Moins de grossissement */
+    }
+}
+/* Pour les téléphones (petits écrans) */
+@media (max-width: 768px) {
+    .forfait-section {
+        padding: 60px 20px; /* Moins de padding */
+    }    
+    .forfait-main-title {
+        font-size: 2.5rem; /* Titre encore plus petit */
+        margin-bottom: 40px; /* Moins d'espace */
+        letter-spacing: 2px; /* Moins d'espacement */
+    }    
+    .forfait-cards-container {
+        flex-direction: column; /* Cartes en colonne */
+        align-items: center; /* Centre les cartes */
+        gap: 30px; /* Espace entre les cartes */
+    }   
+    .forfait-card {
+        width: 100%; /* Largeur complète */
+        max-width: 350px; /* Largeur maximale */
+    }   
+    .forfait-card-featured {
+        transform: none; /* Supprime le grossissement */
+    }   
+    .forfait-amount {
+        font-size: 2.5rem; /* Prix plus petit */
+    }
+}
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .forfait-main-title {
+        font-size: 2rem; /* Titre très petit */
+        letter-spacing: 1px; /* Moins d'espacement */
+    }  
+    .forfait-card {
+        padding: 30px 20px; /* Moins de padding */
+    }    
+    .forfait-card-title {
+        font-size: 1.5rem; /* Titre plus petit */
+    }
+    .forfait-amount {
+        font-size: 2rem; /* Prix plus petit */
+    }   
+    .forfait-features li {
+        font-size: 0.9rem; /* Texte plus petit*/
+    }
+}
+
+/* SECTION QUESTIONS - Titre principal */
+.questions-section {
+    background-color: #000; 
+    padding: 80px 0;
+    text-align: left;
+}
+.questions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.questions-main-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem; /* Très grand titre */
+    font-weight: 700;
+    color: #D40000;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.questions-italic {
+    font-style: italic;
+    color: #D40000;
+}
+
+/* SECTION CONTACT - Formulaire et image */
+.contact-section {
+    background-color: #000; 
+    padding: 60px 0 100px 0;
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 60px; /* Espacement entre formulaire et image */
+    align-items: flex-start;
+}
+/* FORMULAIRE - Partie gauche */
+.contact-form-container {
+    flex: 1;
+    max-width: 500px;
+}
+.contact-form {
+    width: 100%;
+}
+/* GROUPES DE CHAMPS */
+.form-group {
+    margin-bottom: 30px;
+}
+/* LABELS PRINCIPAUX */
+.form-label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* CHAMPS NOM - Côte à côte */
+.name-fields {
+    display: flex;
+    gap: 20px;
+}
+.name-field {
+    flex: 1;
+}
+.field-sublabel {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 8px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+/* INPUTS ET TEXTAREA */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 0; 
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333333;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 0 2px #D40000;
+}
+.form-textarea {
+    resize: vertical; /* Permet de redimensionner seulement verticalement */
+    min-height: 120px;
+}
+/* BOUTON D'ENVOI */
+.form-button-container {
+    margin-top: 40px;
+}
+.contact-submit-button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 15px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 50px; 
+    transition: all 0.3s ease;
+}
+.contact-submit-button:hover {
+    background-color: #ffffff;
+    color: #000;
+    transform: translateY(-2px);
+}
+/* IMAGE - Partie droite */
+.contact-image-container {
+    flex: 1;
+    max-width: 400px;
+}
+.contact-image {
+    width: 100%;
+    height: 500px;
+    background-image: url(images/imagegagnant.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE - Tablettes */
+@media (max-width: 768px) {
+    .questions-main-title {
+        font-size: 3rem;
+    }   
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }  
+    .name-fields {
+        flex-direction: column;
+        gap: 15px;
+    }   
+    .contact-image {
+        height: 300px;
+    }
+}
+/* RESPONSIVE - Mobiles */
+@media (max-width: 480px) {
+    .questions-section {
+        padding: 40px 0;
+    }   
+    .questions-main-title {
+        font-size: 2.5rem;
+    }    
+    .contact-section {
+        padding: 40px 0 60px 0;
+    }  
+    .questions-container,
+    .contact-container {
+        padding: 0 15px;
+    }   
+    .form-group {
+        margin-bottom: 20px;
+    }   
+    .contact-image {
+        height: 250px;
+    }
+}
+/* Section principale de la newsletter */
+.newsletter-section {
+    padding: 40px 20px;
+    position: relative; /* Pour positionner les icônes */
+    display: flex;
+    align-items: left; 
+    justify-content: left; 
+}
+/* Icônes des réseaux sociaux */
+.social-icons {
+    position: absolute; /* Position absolue pour les placer en haut à droite */
+    top: 30px;
+    right: 30px;
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+}
+/* Style des liens des réseaux sociaux */
+.social-link {
+    color: white;
+    font-size: 20px;
+    text-decoration: none; /* Supprime le soulignement */
+    transition: color 0.3s ease; /* Animation au survol */
+}
+/* Effet au survol des icônes */
+.social-link:hover {
+    color: #cccccc; 
+}
+/* Contenu principal centré */
+.newsletter-content {
+    text-align: left;
+    width: 100%;
+}
+/* Formulaire d'inscription */
+.newsletter-form {
+    display: flex;
+    gap: 0; /* Pas d'espacement entre input et bouton */
+    max-width: 500px;
+    margin: 0 auto; 
+    align-items: stretch; /* Les éléments ont la même hauteur */
+}
+/* Champ de saisie email */
+.email-input {
+    flex: 1; /* Prend tout l'espace disponible */
+    padding: 15px 20px;
+    border: none;
+    background-color: white;
+    font-size: 16px;
+    border-radius: 0; 
+    outline: none; /* Supprime la bordure au focus */
+}
+/* Placeholder du champ email */
+.email-input::placeholder {
+    color: #999999;
+}
+/* Bouton d'inscription */
+.submit-button {
+    padding: 15px 30px;
+    background-color: transparent; 
+    border: 2px solid white; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer; /* Curseur pointer au survol */
+    border-radius: 30px; 
+    transition: all 0.3s ease; /* Animation pour les effets de survol */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
+/* Effet au survol du bouton */
+.submit-button:hover {
+    background-color: white;
+    color: #1a1a1a; 
+}
+/* Responsive Design - Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    /* Titre plus petit sur mobile */
+    .main-title {
+        font-size: 36px;
+    }   
+    /* Description plus petite */
+    .description {
+        font-size: 16px;
+    }   
+    /* Formulaire en colonne sur mobile */
+    .newsletter-form {
+        flex-direction: column;
+        gap: 15px;
+    }   
+    /* Bouton prend toute la largeur sur mobile */
+    .submit-button {
+        width: 100%;
+    }  
+    /* Icônes plus petites sur mobile */
+    .social-icons {
+        top: 20px;
+        right: 20px;
+    }
+     .social-link {
+        font-size: 18px;
+    }
+}
